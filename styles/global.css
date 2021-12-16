@@ -13,6 +13,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #24509a;
 }
 
 * {
@@ -21,18 +22,17 @@ a:hover {
 
 h1 {
   color: #24509a;
+  font-size: 38px;
 }
 
-h2 {
-  font-weight: 600;
-  color: #24509a;
-  margin: 20px 0px;
-  font-size: 32px;
+ul{
+    padding: 0;
+    list-style-type: none;
 }
-
 .maxWidth {
   max-width: 1440px;
   margin: 40px auto;
+  padding: 0px 30px;
 }
 
 .map-title {
@@ -69,4 +69,17 @@ ul.nav {
   justify-content: space-evenly;
   color: white;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    ul.nav{
+        display: block;
+        text-align: center;
+    }
+    ul.nav li{
+        margin-bottom: 10px;
+    }
+    ul.nav li:last-child{
+        margin-bottom: 0px;
+    }
 }

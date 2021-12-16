@@ -214,55 +214,54 @@ const Map = () => {
 
     return(
         <div className="maxWidth">
-        <h1>Code Example</h1>
-        <div id="map">
-            <h2 className="center">Map</h2>
-            <LoadScript googleMapsApiKey="AIzaSyBmxA3fvPbVCPv1L2MY1CAJyfTMzKHUMmA">
-                <GoogleMap
-                    mapContainerStyle={containerStyle}
-                    options={options}
-                    center={{ lat: 41.668633, lng: -102.498153 }}
-                    zoom={zoom}
-                >
-                {Data.map((item, index) => {
-                    return (
-                    <>
-                        <Marker
-                            icon={{
-                                url:"../../static/small-map-marker.png"
-                            }}
-                            key={item.name}
-                            position={item.location}
-                            onClick={() => onSelect(item, index)}
-                        />
-                    </>
-                    )
-                })}
-                {selected.location && (
-                    <InfoWindow
-                    position={selected.location}
-                    clickable={true}
-                    options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
-                    onCloseClick={() => setSelected({})}
+            <h1>Code Example</h1>
+            <div id="map">
+                <LoadScript googleMapsApiKey="AIzaSyBmxA3fvPbVCPv1L2MY1CAJyfTMzKHUMmA">
+                    <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        options={options}
+                        center={{ lat: 41.668633, lng: -102.498153 }}
+                        zoom={zoom}
                     >
-                    <div>
-                        <div className="map-title">
-                            <Link
-                                href={selected.link}
-                            >
-                                {selected.name}
-                            </Link>
+                    {Data.map((item, index) => {
+                        return (
+                        <>
+                            <Marker
+                                icon={{
+                                    url:"../../static/small-map-marker.png"
+                                }}
+                                key={item.name}
+                                position={item.location}
+                                onClick={() => onSelect(item, index)}
+                            />
+                        </>
+                        )
+                    })}
+                    {selected.location && (
+                        <InfoWindow
+                        position={selected.location}
+                        clickable={true}
+                        options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
+                        onCloseClick={() => setSelected({})}
+                        >
+                        <div>
+                            <div className="map-title">
+                                <Link
+                                    href={selected.link}
+                                >
+                                    {selected.name}
+                                </Link>
+                            </div>
+                            <br />
+                            <div className="maps-info">{selected.address}</div>
+                            <br />
+                            <a className="map-direction" rel="noreferrer" target="_blank" href={`https://www.google.com/maps/place/${selected.address}`}>Directions</a>
                         </div>
-                        <br />
-                        <div className="maps-info">{selected.address}</div>
-                        <br />
-                        <a className="map-direction" rel="noreferrer" target="_blank" href={`https://www.google.com/maps/place/${selected.address}`}>Directions</a>
-                    </div>
-                    </InfoWindow>
-                )}
-                </GoogleMap>
-            </LoadScript>
-        </div>
+                        </InfoWindow>
+                    )}
+                    </GoogleMap>
+                </LoadScript>
+            </div>
         </div>
     )
 }

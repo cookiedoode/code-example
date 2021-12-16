@@ -213,7 +213,9 @@ const Map = () => {
     }
 
     return(
-        <div id="map" className="maxWidth">
+        <div className="maxWidth">
+        <h1>Code Example</h1>
+        <div id="map">
             <h2 className="center">Map</h2>
             <LoadScript googleMapsApiKey="AIzaSyBmxA3fvPbVCPv1L2MY1CAJyfTMzKHUMmA">
                 <GoogleMap
@@ -260,6 +262,7 @@ const Map = () => {
                 )}
                 </GoogleMap>
             </LoadScript>
+        </div>
         </div>
     )
 }

@@ -32,35 +32,41 @@ h2 {
 
 .maxWidth {
   max-width: 1440px;
-  margin: 100px auto;
+  margin: 40px auto;
 }
 
 .map-title {
-    width: 232px;
-    font-size: 16px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    color: #426da9;
-    display: block;
-  }
-  
-  .maps-info {
-    width: 260px;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: normal;
-    color: #53565a;
-    display: block;
-  }
-  
-  .map-direction {
-    color: #0097a9;
-    font-size: 16px;
-  }
-  
+  width: 232px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #426da9;
+  display: block;
+}
 
+.maps-info {
+  width: 260px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #53565a;
+  display: block;
+}
 
+.map-direction {
+  color: #0097a9;
+  font-size: 16px;
+}
 
+ul.nav {
+  background: gray;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: bold;
+}
